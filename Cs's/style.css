@@ -177,6 +177,120 @@
 
 /* Termina StartSection  */
 
+/* Comienza Valoraciones */
+
+.Experience-Cards{
+    display: grid;
+    grid-template-areas: 
+    "card1 card2 card3"
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 50px;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px 300px 20px;
+    
+
+}
+
+.card1{
+    grid: card1;
+    padding: 20px;
+    border-radius: 10px;
+    border: 0.5px solid rgb(196, 196, 196);
+    height: 550px;
+
+}
+
+.card1 img{
+    border-radius: 50%;
+    border: 2px solid #727171;
+    
+}
+
+.card1 .time-card{
+    margin-bottom: 20px;
+    font-weight: 200;
+}
+
+.card1 .Review-Text{
+    font-style: italic;
+}
+
+.card2{
+    grid: card2;
+    padding: 20px;
+    border-radius: 10px;
+    border: 0.5px solid rgb(196, 196, 196);
+    height: 550px;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card2 img{
+    border-radius: 50%;
+    border: 2px solid #727171;
+    margin-top: 15px;
+}
+
+.card2 .time-card{
+    margin-bottom: 20px;
+    font-weight: 200;
+}
+
+.card2 .Review-Text{
+    font-style: italic;
+}
+.card3{
+    grid: card3;
+    padding: 20px;
+    border-radius: 10px;
+    border: 0.5px solid rgb(196, 196, 196);
+    height: 550px;
+    align-content: center;
+    justify-content: center;
+}
+
+.card3 img{
+    border-radius: 50%;
+    border: 2px solid #727171;
+    margin-top: 15px;
+}
+
+.card3 .time-card{
+    margin-bottom: 20px;
+    font-weight: 200;
+}
+
+.card3 .Review-Text{
+    font-style: italic;
+}
+
+@media (max-width: 640px) {
+    .Experience-Cards{
+        display: grid;
+        grid-template-areas: 
+        "card1 
+        "card2" 
+        "card3"
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 50px;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        padding: 100px 20px 300px 20px;
+    }
+}
+
+
+
+/* Termina Valoraciones  */
+
 .Inicio-VideoPresentacion{
     height: 100%;
     width: 100%;
