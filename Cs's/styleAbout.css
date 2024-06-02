@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Comienza NavSection */
+
+.nav-bar{
+    width: 100%;
+    height: 70px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #89a7b1;
+    overflow: hidden; 
+    
+}
+
+.nav-bar ul{
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.nav-bar ul li{
+    display: inline-block;
+    padding-right: 25px;
+
+} 
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: #727171;
+}
+
+@media (max-width: 640px) {
+    .nav-bar{
+        height: 250px;
+    }
+
+    .nav-bar ul li{
+        display: block;
+        text-align: left;
+    }
+}
+
+.nav-bar ul li a,
+.nav-bar ul li a:after,
+.nav-bar ul li a:before {
+  transition: all .5s;
+}
+
+.nav-bar ul li a:hover {
+    color: #272727;
+}
+
+.nav-bar ul li a{
+    position: relative;
+}
+
+.nav-bar ul li a:after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #272727;
+    height: 1px;
+    margin-bottom: -7px;
+    
+}
+
+.nav-bar ul li a:hover::after{
+    width: 100%;
+}
+
+.nav-bar img{
+    padding-right: 30px;
+}
+/* Termina NavSection */
+
+/* Comienza AboutUsSection  */
+
+.AboutUS-Section{
+    display: inline-block;
+    align-items: center;
+}
+
+.title-AboutUS{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    text-align: center;
+    padding: 30px;
+}
+
+.subTitle-AboutUS{
+    align-items: center;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px 200px 30px 200px;
+}
+
+/* Termina AboutUsSection  */
+
+.MapsAndText{
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+
+.mapa{
+    padding: 30px;
+}
+
+.mapa iframe{
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+}
+
+.text p{
+    text-align: center;
+}
+
+/* Comienza FooterSection  */
+
+footer{
+    background-color: rgb(209, 209, 209);
+    width: 100%;
+}
+
+.List{
+    list-style: none;
+    text-decoration: none;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 640px) {
+    .List{
+        display: block;
+        text-align: center;
+    }
+}
+
+.List li{
+    padding: 10px 25px;
+    list-style: none;
+}
+
+.List li a{
+    text-decoration: none;
+    color: #adabab;
+}
+
+.ComplementText{
+    text-align: center;
+    padding-bottom: 15px;
+    color: #adabab;
+}
+
+/* Termina FooterSection  */

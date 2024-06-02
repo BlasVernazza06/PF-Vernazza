@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    scrollbar-gutter: auto;
+}
+
+
+/* Comienza NavSection */
+
+.nav-bar{
+    width: 100%;
+    height: 70px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #89a7b1;
+    overflow: hidden; 
+    
+}
+
+.nav-bar ul{
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.nav-bar ul li{
+    display: inline-block;
+    padding-right: 25px;
+
+} 
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: #727171;
+}
+
+@media (max-width: 640px) {
+    .nav-bar{
+        height: 250px;
+    }
+
+    .nav-bar ul li{
+        display: block;
+        text-align: left;
+        padding: 10px;
+    }
+}
+
+.nav-bar ul li a,
+.nav-bar ul li a:after,
+.nav-bar ul li a:before {
+  transition: all .5s;
+}
+
+.nav-bar ul li a:hover {
+    color: #272727;
+}
+
+.nav-bar ul li a{
+    position: relative;
+}
+
+.nav-bar ul li a:after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #272727;
+    height: 1px;
+    margin-bottom: -7px;
+    
+}
+
+.nav-bar ul li a:hover::after{
+    width: 100%;
+}
+
+.nav-bar img{
+    padding-right: 30px;
+}
+/* Termina NavSection */
+
+/* Comienza StartSection  */
+
+
+.grid-StartSection{
+    display: grid;
+    grid-template-areas: 
+    "Texto Image";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 40px;
+}
+
+.StartTextSection{
+    padding: 40px 0px 10px 40px;
+    overflow: hidden;
+    grid: Texto;
+
+    
+}
+
+
+.title{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.sub-title{
+    padding: 30px 10px 0px 10px;
+    
+}
+
+.Startbuttons{
+    padding-top: 15px;
+    text-align: center;
+}
+
+.Startbuttons button{
+    margin: 10px;
+    border-radius: 20px;    
+}
+
+.More{
+    padding: 10px 54px;
+}
+
+.Start {
+    padding: 10px 40px;
+    background-color: #4D4444;
+    color: whitesmoke;
+}
+
+.StartImage{
+    grid: Image;
+    justify-self: center;
+    align-self: end;
+    height: 220px;
+    
+    
+}
+
+@media (max-width: 1024px) {
+    .grid-StartSection{
+        display: grid;
+        grid-template-areas: 
+        "Texto"
+        "Image"
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1px;
+        padding-top: 20px;
+    }
+
+    .StartTextSection{
+        padding: 0px 100px 0px 100px;
+        height: 100%;
+        
+
+    }
+
+}
+
+
+/* Termina StartSection  */
+
+.Inicio-VideoPresentacion{
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    
+}
+
+.video{
+    padding: 30px;
+    
+}
+
+.video iframe{
+    height: 500px;
+    width: 700px;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.text p{
+    text-align: center;
+}
+
+@media (max-width: 1240px) {
+    .Inicio-VideoPresentacion{
+        display: block;
+    }
+
+    .video{
+        text-align: center;
+    }
+    
+    .video iframe{
+        width: 600px;
+    }
+
+    .text p{
+        text-align: center;
+        justify-self: center;
+        padding: 0px 130px 20px;
+    }
+}
+
+/* Comienza FooterSection  */
+
+footer{
+    background-color: rgb(209, 209, 209);
+    width: 100%;
+}
+
+.List{
+    list-style: none;
+    text-decoration: none;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 640px) {
+    .List{
+        display: block;
+        text-align: center;
+    }
+}
+
+.List li{
+    padding: 10px 25px;
+    list-style: none;
+}
+
+.List li a{
+    text-decoration: none;
+    color: #adabab;
+}
+
+.ComplementText{
+    text-align: center;
+    padding-bottom: 15px;
+    color: #adabab;
+}
+
+/* Termina FooterSection  */
+

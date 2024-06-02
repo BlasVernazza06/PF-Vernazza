@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;  
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* Comienza NavSection */
+
+.nav-bar{
+    width: 100%;
+    height: 70px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #89a7b1;
+    overflow: hidden; 
+    
+}
+
+.nav-bar ul{
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.nav-bar ul li{
+    display: inline-block;
+    padding-top: 15px;
+    padding-right: 25px;
+
+} 
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: #727171;
+}
+
+@media (max-width: 640px) {
+    .nav-bar{
+        height: 250px;
+    }
+
+    .nav-bar ul li{
+        display: block;
+        text-align: left;
+    }
+}
+
+.nav-bar ul li a,
+.nav-bar ul li a:after,
+.nav-bar ul li a:before {
+  transition: all .5s;
+}
+
+.nav-bar ul li a:hover {
+    color: #272727;
+}
+
+.nav-bar ul li a{
+    position: relative;
+}
+
+.nav-bar ul li a:after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #272727;
+    height: 1px;
+    margin-bottom: -7px;
+    
+}
+
+.nav-bar ul li a:hover::after{
+    width: 100%;
+}
+
+.nav-bar img{
+    padding-right: 30px;
+}
+/* Termina NavSection */
+
+.Help-Section .title-help p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+.Help-Section .subtitle-help p{
+    text-align: center;
+    padding-top: 15px;
+    font-weight: 200;
+
+}
+
+.Form-Help-Section{
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.Form-Help-Section .Card-Form{
+    background-color: rgb(238, 240, 241);
+    width: 100%;
+    padding-bottom: 15px;
+    
+    margin-top: 30px;
+    border: 1px solid rgb(180, 179, 177);
+    border-bottom: none;
+}
+
+.form-label{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+
+/* Comienza FooterSection  */
+
+footer{
+    background-color: rgb(209, 209, 209);
+    width: 100%;
+}
+
+.List{
+    list-style: none;
+    text-decoration: none;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 640px) {
+    .List{
+        display: block;
+        text-align: center;
+    }
+}
+
+.List li{
+    padding: 10px 25px;
+    list-style: none;
+}
+
+.List li a{
+    text-decoration: none;
+    color: #adabab;
+}
+
+.ComplementText{
+    text-align: center;
+    padding-bottom: 15px;
+    color: #adabab;
+}
+
+/* Termina FooterSection  */
