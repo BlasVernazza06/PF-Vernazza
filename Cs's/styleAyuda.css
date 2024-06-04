@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;  
-    font-family: "Montserrat", sans-serif;
+    font-family: "Josefin Sans", sans-serif;
 }
 
 
@@ -19,27 +20,28 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: #89a7b1;
+    background-color: #4e4f50;
     overflow: hidden; 
+    box-shadow: 0.5px 0.7px 0.7px 0.7px rgba(0, 0, 0, 0.2);
     
 }
 
 .nav-bar ul{
     width: 100%;
-    padding: 10px 20px;
+    padding: 0px 20px;
+    margin-top: auto;
     text-align: center;
 }
 
 .nav-bar ul li{
     display: inline-block;
-    padding-top: 15px;
     padding-right: 25px;
 
 } 
 
 .nav-bar ul li a {
     text-decoration: none;
-    color: #727171;
+    color: #ebebeb;
 }
 
 @media (max-width: 640px) {
@@ -50,6 +52,7 @@
     .nav-bar ul li{
         display: block;
         text-align: left;
+        padding: 10px;
     }
 }
 
@@ -60,7 +63,7 @@
 }
 
 .nav-bar ul li a:hover {
-    color: #272727;
+    color: #eca058;
 }
 
 .nav-bar ul li a{
@@ -76,7 +79,7 @@
     width: 0%;
     content: '.';
     color: transparent;
-    background: #272727;
+    background: #eca058;
     height: 1px;
     margin-bottom: -7px;
     
@@ -128,7 +131,7 @@
 /* Comienza FooterSection  */
 
 footer{
-    background-color: rgb(209, 209, 209);
+    background-color: #4e4f50;
     width: 100%;
 }
 
@@ -154,13 +157,13 @@ footer{
 
 .List li a{
     text-decoration: none;
-    color: #adabab;
+    color: #8a8686;
 }
 
 .ComplementText{
     text-align: center;
     padding-bottom: 15px;
-    color: #adabab;
+    color: #8a8686;
 }
 
 /* Termina FooterSection  */
