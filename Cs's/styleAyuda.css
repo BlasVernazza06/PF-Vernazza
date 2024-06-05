@@ -115,16 +115,24 @@
 .Form-Help-Section .Card-Form{
     background-color: rgb(238, 240, 241);
     width: 100%;
-    padding-bottom: 15px;
-    
+    padding: 15px 15px;
     margin-top: 30px;
     border: 1px solid rgb(180, 179, 177);
     border-bottom: none;
 }
 
 .form-label{
-    padding-top: 10px;
-    padding-left: 10px;
+    text-align: left;
+}
+
+.btn{
+    background-color: #eca058;
+    border: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    justify-self: center;
+    align-self: center;
+    text-align: end;
 }
 
 
