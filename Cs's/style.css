@@ -98,19 +98,22 @@
 
 
 .grid-StartSection{
-    display: grid;
-    grid-template-areas: 
-    "Texto Image";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 40px;
+    background-image: url(/Images/paralax2Home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    box-shadow: 1px 1px 1px 1px #e2e0e0;
+    width: 100%;
+    height: 600px;
+    
 }
 
 .StartTextSection{
-    padding: 40px 0px 10px 40px;
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
     overflow: hidden;
-    grid: Texto;
-
     
 }
 
@@ -181,111 +184,104 @@
 
 /* Comienza Valoraciones */
 
-.Experience-Cards{
+.experience-section{
+    text-align: center;
+    background-color: #f3f3f3;
+    
+}
+
+.experience-title{
+    padding-top: 40px;
+    
+}
+
+.experience-title span{
+    padding-top: 40px;
+    font-weight: 200;
+}
+
+
+.Section-Cards{
     display: grid;
     grid-template-areas: 
-    "card1 card2 card3"
+    "card1 card2"
+    "card3 card4"
     ;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 1fr 1fr;
     gap: 50px;
-    justify-items: center;
-    align-items: center;
+    justify-content: center;
+    align-content: center;
     text-align: center;
-    padding: 100px 20px 300px 20px;
+    padding: 50px 20px 200px 20px;
     
 
 }
 
-.card1{
+#card1{
     grid: card1;
-    padding: 20px;
-    border-radius: 10px;
-    border: 0.5px solid rgb(196, 196, 196);
-    height: 550px;
-
 }
 
-.card1 img{
+#card2{
+    grid: card2;
+}
+
+#card3{
+    grid: card3;
+}
+
+#card4{
+    grid: card4;
+}
+.cards{
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    border: 0.5px solid rgb(196, 196, 196);
+    height: 100%;
+    box-shadow: 1px 1px 1px 1px #dddada;
+}
+
+.cards:hover{
+    transition: 0.7s all;
+    box-shadow: 1px 1px 1px 1px #b1b0b0;
+}
+
+.cards img{
     border-radius: 50%;
     border: 2px solid #727171;
+    margin-bottom: 15px;
     
 }
 
-.card1 .time-card{
+.cards .time-card{
     margin-bottom: 20px;
     font-weight: 200;
 }
 
-.card1 .Review-Text{
+.cards .Review-Text{
     font-style: italic;
 }
 
-.card2{
-    grid: card2;
-    padding: 20px;
-    border-radius: 10px;
-    border: 0.5px solid rgb(196, 196, 196);
-    height: 550px;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
-}
 
-.card2 img{
-    border-radius: 50%;
-    border: 2px solid #727171;
-    margin-top: 15px;
-}
-
-.card2 .time-card{
-    margin-bottom: 20px;
-    font-weight: 200;
-}
-
-.card2 .Review-Text{
-    font-style: italic;
-}
-.card3{
-    grid: card3;
-    padding: 20px;
-    border-radius: 10px;
-    border: 0.5px solid rgb(196, 196, 196);
-    height: 550px;
-    align-content: center;
-    justify-content: center;
-}
-
-.card3 img{
-    border-radius: 50%;
-    border: 2px solid #727171;
-    margin-top: 15px;
-}
-
-.card3 .time-card{
-    margin-bottom: 20px;
-    font-weight: 200;
-}
-
-.card3 .Review-Text{
-    font-style: italic;
-}
-
-@media (max-width: 640px) {
-    .Experience-Cards{
+@media (max-width: 1080px) {
+    .Section-Cards{
         display: grid;
         grid-template-areas: 
-        "card1 
-        "card2" 
+        "card1 card2"
         "card3"
         ;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         gap: 50px;
-        justify-items: center;
+        justify-content: center;
         align-items: center;
         text-align: center;
         padding: 100px 20px 300px 20px;
+    }
+
+    .cards{
+        height: 500px;
     }
 }
 
