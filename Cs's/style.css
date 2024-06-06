@@ -27,6 +27,16 @@
     
 }
 
+.logo-nav{
+    padding: 40px;
+}
+
+.logo-nav p{
+    font-weight: 700;
+    font-size: larger;
+    color: #fd9b40;
+}
+
 .nav-bar ul{
     width: 100%;
     padding: 10px 20px;
@@ -98,7 +108,7 @@
 
 
 .grid-StartSection{
-    background-image: url(/Images/paralax2Home.jpg);
+    background-image: url(/Images/parallax3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -213,7 +223,7 @@
     justify-content: center;
     align-content: center;
     text-align: center;
-    padding: 50px 20px 200px 20px;
+    padding: 50px 20px 80px 20px;
     
 
 }
@@ -263,6 +273,16 @@
     font-style: italic;
 }
 
+.complement-text{
+    padding-bottom: 30px;
+    display: flex;
+}
+
+.quotation-marks{
+    font-size:40px;
+    color: #eca058;
+}
+
 
 @media (max-width: 1080px) {
     .Section-Cards{
@@ -277,7 +297,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding: 100px 20px 300px 20px;
+        padding: 50px 20px 80px 20px;
     }
 
     .cards{
