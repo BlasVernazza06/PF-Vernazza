@@ -26,7 +26,8 @@
 }
 
 .logo-nav{
-    padding: 40px;
+    padding-left: 40px;
+    padding-top: 20px;
 }
 
 .logo-nav p{
@@ -45,6 +46,7 @@
 .nav-bar ul li{
     display: inline-block;
     padding-right: 25px;
+    padding-top: 20px;
 
 } 
 
@@ -105,6 +107,10 @@
 
 /* Comienza AboutUsSection  */
 
+.body-about{
+    background-color: #f5f4f4d0;
+}
+
 .AboutUS-Section{
     display: inline-block;
     align-items: center;
@@ -121,12 +127,15 @@
     align-items: center;
     text-align: center;
     font-size: 15px;
-    padding: 20px 200px 30px 200px;
+    padding: 20px 100px 30px 100px;
 }
+
+
 
 /* Termina AboutUsSection  */
 
 .MapsAndText{
+    border-top: 1px solid gray;
     height: 100%;
     width: 100%;
     display: inline-flex;
@@ -145,6 +154,19 @@
 
 .text p{
     text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .MapsAndText{
+        display: block;
+        height: 100%;
+    }
+
+    .mapa{
+        text-align: center;
+        justify-self: center;
+        align-self: center;
+    }
 }
 
 /* Comienza FooterSection  */
