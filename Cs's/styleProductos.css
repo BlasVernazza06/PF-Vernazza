@@ -163,6 +163,10 @@
     grid: Product4;
 }
 
+.animate__zoomIn{
+    --animate-duration: 1.3s;
+}
+
 @media (max-width: 1536px) {
     .grid-Products{
         display: grid;
@@ -378,7 +382,8 @@
 }
 
 .Products:hover{
-    transition: 0.5s all;
+    transform: scale(1.05);
+    transition: 2s all;
     box-shadow: 2px 2px 2px 2px rgba(241, 238, 238, 0.911);
 }
 
@@ -524,8 +529,10 @@
 .grid-item3{
     grid: grid-item3;
     padding: 0px 20px;
-    
-    
+}
+
+.animate__bounceIn{
+    --animate-duration: 1.6s;
 }
 
 @media (max-width: 740px) {
