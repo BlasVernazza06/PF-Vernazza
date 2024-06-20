@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  scrollbar-gutter: auto;
+}
+
+/* Comienza NavSection */
+.nav-bar {
+  width: 100%;
+  height: 70px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0.5px 0.7px 0.7px 0.7px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    height: 250px;
+  }
+}
+.nav-bar .logo-nav {
+  padding: 40px;
+}
+.nav-bar .logo-nav p {
+  font-weight: 700;
+  font-size: larger;
+  color: #fd9b40;
+}
+.nav-bar ul {
+  width: 100%;
+  padding: 10px 20px;
+  text-align: center;
+}
+.nav-bar ul li {
+  display: inline-block;
+  padding-right: 25px;
+}
+@media screen and (max-width: 768px) {
+  .nav-bar ul li {
+    display: block;
+    text-align: left;
+    padding: 10px;
+  }
+}
+.nav-bar ul li a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.5s;
+  position: relative;
+}
+.nav-bar ul li a:after {
+  transition: all 0.5s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: black;
+  height: 1px;
+  margin-bottom: -7px;
+}
+.nav-bar ul li a:before {
+  transition: all 0.5s;
+}
+.nav-bar ul li a:hover {
+  color: black;
+}
+.nav-bar ul li a:hover::after {
+  width: 100%;
+}
+.nav-bar ul li img {
+  padding-right: 30px;
+}
+
+/* Termina NavSection */
+/* Comienza ContSection  */
+.ContactSection {
+  width: 100%;
+  padding-bottom: 20px;
+  background-color: rgba(245, 244, 244, 0.8156862745);
+}
+.ContactSection .title p {
+  text-align: center;
+  padding: 20px;
+  font-size: 25px;
+  font-weight: 700;
+}
+.ContactSection .subtitle p {
+  text-align: center;
+  font-weight: 300;
+}
+.ContactSection .header-contact-section {
+  background-color: #fd9b40;
+  color: rgb(255, 255, 255);
+  padding-bottom: 20px;
+}
+.ContactSection .grid-Cards {
+  display: grid;
+  grid-template-areas: "Card-1 Card-2";
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+@media screen and (max-width: 640px) {
+  .ContactSection .grid-Cards {
+    display: grid;
+    grid-template-areas: "Card-1" "Card-2";
+    grid-template-columns: 400px;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+.ContactSection .grid-Cards .Cards {
+  border: 1px solid rgb(221, 225, 232);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  background-color: white;
+}
+.ContactSection .grid-Cards .Cards .Card-subtitle {
+  padding-top: 10px;
+  font-weight: 300;
+}
+.ContactSection .grid-Cards .Cards .image-text {
+  width: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.ContactSection .grid-Cards .Cards .image-text img {
+  justify-self: center;
+  align-self: center;
+  padding-right: 10px;
+}
+.ContactSection .grid-Cards .Cards .image-text p {
+  justify-self: center;
+  align-self: center;
+}
+.ContactSection .grid-Cards .Cards .image-text .number-card-1 {
+  font-weight: 400;
+}
+.ContactSection .grid-Cards .Cards .Support-Button {
+  width: 130px;
+  height: 30px;
+  margin-top: 30px;
+  background-color: #fd9b40;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.ContactSection .grid-Cards .Cards .Support-Button:hover {
+  transition: 0.4s all;
+  box-shadow: 1px 1px 0.5px 0.5px rgb(185, 180, 180);
+}
+.ContactSection .grid-Cards .Cards .Support-Button a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+.ContactSection .grid-Cards .Cards .Card-1 {
+  grid: Card-1;
+}
+.ContactSection .grid-Cards .Cards .Card-2 {
+  grid: Card-2;
+}
+
+/* Termina ContSection  */
+/* Comienza ContactSection */
+.Local-calls {
+  padding-bottom: 40px;
+  background-color: rgba(245, 244, 244, 0.8156862745);
+  border-top: 1px solid rgb(211, 207, 207);
+}
+.Local-calls .title p {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 25px;
+  font-weight: 500;
+}
+.Local-calls .subtitle p {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  font-weight: 220;
+}
+.Local-calls .grid-cardNumbers {
+  display: grid;
+  grid-template-areas: "number-1 number-2 number-3" "number-4 number-5 number-6";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 50px;
+}
+.Local-calls .grid-cardNumbers .number-1, .Local-calls .grid-cardNumbers .number-6, .Local-calls .grid-cardNumbers .number-5, .Local-calls .grid-cardNumbers .number-4, .Local-calls .grid-cardNumbers .number-3, .Local-calls .grid-cardNumbers .number-2 {
+  justify-self: center;
+  text-align: center;
+  grid: number-1;
+}
+.Local-calls .grid-cardNumbers .number-1 .flags, .Local-calls .grid-cardNumbers .number-6 .flags, .Local-calls .grid-cardNumbers .number-5 .flags, .Local-calls .grid-cardNumbers .number-4 .flags, .Local-calls .grid-cardNumbers .number-3 .flags, .Local-calls .grid-cardNumbers .number-2 .flags {
+  width: 40px;
+  height: 40px;
+}
+.Local-calls .grid-cardNumbers .number-2 {
+  grid: number-2;
+}
+.Local-calls .grid-cardNumbers .number-2 .flags {
+  width: 40px;
+  height: 40px;
+}
+.Local-calls .grid-cardNumbers .number-3 {
+  grid: number-3;
+}
+.Local-calls .grid-cardNumbers .number-3 .flags {
+  width: 40px;
+  height: 40px;
+}
+.Local-calls .grid-cardNumbers .number-4 {
+  grid: number-4;
+}
+.Local-calls .grid-cardNumbers .number-4 .flags {
+  width: 40px;
+  height: 40px;
+}
+.Local-calls .grid-cardNumbers .number-5 {
+  grid: number-5;
+}
+.Local-calls .grid-cardNumbers .number-5 .flags {
+  width: 40px;
+  height: 40px;
+}
+.Local-calls .grid-cardNumbers .number-6 {
+  grid: number-6;
+}
+.Local-calls .grid-cardNumbers .number-6 .flags {
+  width: 40px;
+  height: 40px;
+}
+
+/* Termina ContactSection  */
+/* Comienza FooterSection  */
+footer {
+  background-color: white;
+  width: 100%;
+  border-top: 1px solid rgb(236, 229, 229);
+}
+footer .List {
+  list-style: none;
+  text-decoration: none;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 640px) {
+  footer .List {
+    display: block;
+    text-align: center;
+  }
+}
+footer .List li {
+  padding: 10px 25px;
+  list-style: none;
+}
+footer .List li a {
+  text-decoration: none;
+  color: black;
+}
+footer .ComplementText {
+  text-align: center;
+  padding-bottom: 15px;
+  color: black;
+}
+
+/* Termina FooterSection  *//*# sourceMappingURL=styleContact.css.map */

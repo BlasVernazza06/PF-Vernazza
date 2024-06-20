@@ -1,0 +1,345 @@
+@import 'utilities/media-queries';
+@import 'utilities/variables';
+@import 'base/tipografias';
+@import 'base/reset';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+
+/* Comienza NavSection */
+
+.nav-bar{
+    width: 100%;
+    height: 70px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: $background-color;
+    overflow: hidden; 
+    box-shadow: $box-shadow-navbar;
+
+    @include tablet{
+        height: 250px;
+    }
+
+    .logo-nav{
+        padding: 40px;
+        p{
+            font-weight: 700;
+            font-size: larger;
+            color: $main-color;
+        }
+    }
+
+    ul{
+        width: 100%;
+        padding: 10px 20px;
+        text-align: center;
+    
+
+        li{
+            display: inline-block;
+            padding-right: 25px;
+
+            @include tablet{
+                display: block;
+                text-align: left;
+                padding: 10px;
+            }
+
+            a{
+                text-decoration: none;
+                color: $nav-color-a;
+                transition: all .5s;
+				position: relative;
+
+				&:after {
+                    transition: all .5s;
+					position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    width: 0%;
+                    content: '.';
+                    color: transparent;
+                    background: $nav-color-a;
+                    height: 1px;
+                    margin-bottom: -7px;
+				}
+				&:before {
+					transition: all .5s;
+				}
+				&:hover {
+					color: $nav-color-a;
+					&::after {
+						width: 100%;
+					}
+				}
+            }
+            img{
+                padding-right: 30px;
+            }
+        }    
+    }
+}
+
+/* Termina NavSection */
+
+/* Comienza ContSection  */
+
+.ContactSection{
+    width: 100%;
+    padding-bottom: 20px;
+    background-color: $background-page-color;
+
+
+
+    .title{
+        p{
+            text-align: center;
+            padding: 20px;
+            font-size: 25px;
+            font-weight: 700;
+        }
+    }
+
+    .subtitle{
+        p{
+            text-align: center;
+            font-weight: 300;
+        }
+        
+        
+    }
+
+    .header-contact-section{
+        background-color: $main-color;
+        color: rgb(255, 255, 255);
+        padding-bottom: 20px;
+    }
+
+    .grid-Cards{
+        @include grid-cards-contactos;
+
+        @include phone{
+            display: grid;
+            grid-template-areas: 
+            "Card-1"
+            "Card-2"
+            ;
+            grid-template-columns: 400px;
+            grid-template-rows: 1fr 1fr;
+        }
+        
+
+        .Cards{
+            border: $border-color-cards;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            background-color: $background-color;
+
+            .Card-subtitle{
+                padding-top: 10px;
+                font-weight: 300;
+            }
+
+            .image-text{
+                width: 100px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                padding-top: 20px;
+        
+                img{
+                    justify-self: center;
+                    align-self: center;
+                    padding-right: 10px;
+                }
+        
+                p{
+                    justify-self: center;
+                    align-self: center;
+                }
+
+                .number-card-1{
+                    font-weight: 400;
+                }
+            }
+
+            .Support-Button{
+                width: 130px;
+                height: 30px;
+                margin-top: 30px;
+                background-color: $main-color;
+                border-radius: 10px;
+                border: none;
+                cursor: pointer;
+
+                &:hover{
+                    transition: 0.4s all;
+                    box-shadow: 1px 1px 0.5px 0.5px $button-box-shadow-color;
+                }
+
+                a{
+                    color: whitesmoke;
+                    text-decoration: none; 
+                }
+            }
+
+            .Card-1{
+                grid: Card-1;   
+            }
+            .Card-2{
+                grid: Card-2;
+            }   
+        }
+    }
+}
+
+/* Termina ContSection  */
+
+/* Comienza ContactSection */
+
+.Local-calls{
+    padding-bottom: 40px;
+    background-color: #f5f4f4d0;
+    border-top: 1px solid rgb(211, 207, 207);
+
+    .title{
+        p{
+            text-align: center;
+            padding-top: 20px;
+            font-size: 25px;
+            font-weight: 500;
+        }
+    }
+
+    .subtitle{
+        p{
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 50px;
+            font-weight: 220;
+        }
+    }
+
+    .grid-cardNumbers{
+        @include grid-card-Numbers(50px);
+    
+
+        .number-1{
+            justify-self: center;
+            text-align: center;
+            grid: number-1;
+
+            .flags{
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        .number-2{
+            @extend .number-1;
+            grid: number-2;
+
+            .flags{
+                width: 40px;
+                height: 40px;
+                
+            }
+        }
+
+        .number-3{
+            @extend .number-1;
+            grid: number-3;
+
+            .flags{
+                width: 40px;
+                height: 40px;
+                
+            }
+        }
+
+        .number-4{
+            @extend .number-1;
+            grid: number-4;
+
+            .flags{
+                width: 40px;
+                height: 40px;
+                
+            }
+        }
+
+        .number-5{
+            @extend .number-1;
+            grid: number-5;
+
+            .flags{
+                width: 40px;
+                height: 40px;
+                
+            }
+        }
+
+        .number-6{
+            @extend .number-1;
+            grid: number-6;
+
+            .flags{
+                width: 40px;
+                height: 40px;
+                
+            }
+        }
+    }    
+}
+
+/* Termina ContactSection  */
+
+/* Comienza FooterSection  */
+
+footer{
+    background-color: $background-color;
+    width: 100%;
+    border-top: 1px solid rgb(236, 229, 229);
+
+    .List{
+        list-style: none;
+        text-decoration: none;
+        padding-top: 10px;
+        display: flex;
+        justify-content: center;
+
+        @include phone{
+            display: block;
+            text-align: center;
+        }
+
+        li{
+            padding: 10px 25px;
+            list-style: none;
+
+            a{
+                text-decoration: none;
+                color: black;
+            }
+        }
+
+    }
+
+    .ComplementText{
+        text-align: center;
+        padding-bottom: 15px;
+        color: black;
+    }
+}
+
+/* Termina FooterSection  */
