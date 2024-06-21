@@ -12,15 +12,15 @@
 /* Comienza NavSection */
 
 .nav-bar{
-    width: 100%;
+    width: map-get($estilos, width);
     height: 70px;
     font-size: 20px;
-    display: flex;
+    display: map-get($estilos, display);
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    align-items: map-get($estilos, align-items);
+    justify-content: map-get($estilos, justify-content);
     background-color: $background-color;
-    overflow: hidden; 
+    overflow: map-get($estilos, overflow); 
     box-shadow: $box-shadow-navbar;
 
     @include tablet{
@@ -37,55 +37,56 @@
     }
 
     ul{
-        width: 100%;
+        width: map-get($estilos, width);
         padding: 10px 20px;
-        text-align: center;
+        text-align:map-get($estilos, text-align);
     
+        @for $i from 1 through $nav-item-count {
+            li:nth-child(#{$i}){
+                display: inline-block;
+                padding-right: 25px;
 
-        li{
-            display: inline-block;
-            padding-right: 25px;
+                @include tablet{
+                    display: block;
+                    text-align: left;
+                    padding: 10px;
+                }
 
-            @include tablet{
-                display: block;
-                text-align: left;
-                padding: 10px;
-            }
+                a{
+                    text-decoration: map-get($estilos, text-decoration);
+                    color: $nav-color-a;
+                    transition: map-get($estilos, transition);
+                    position: relative;
 
-            a{
-                text-decoration: none;
-                color: $nav-color-a;
-                transition: all .5s;
-				position: relative;
-
-				&:after {
-                    transition: all .5s;
-					position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    margin: auto;
-                    width: 0%;
-                    content: '.';
-                    color: transparent;
-                    background: $nav-color-a;
-                    height: 1px;
-                    margin-bottom: -7px;
-				}
-				&:before {
-					transition: all .5s;
-				}
-				&:hover {
-					color: $nav-color-a;
-					&::after {
-						width: 100%;
-					}
-				}
-            }
-            img{
-                padding-right: 30px;
-            }
-        }    
+                    &:after {
+                        transition: map-get($estilos, transition);
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        width: 0%;
+                        content: '.';
+                        color: transparent;
+                        background: $nav-color-a;
+                        height: 1px;
+                        margin-bottom: -7px;
+                    }
+                    &:before {
+                        transition: map-get($estilos, transition);
+                    }
+                    &:hover {
+                        color: $nav-color-a;
+                        &::after {
+                            width: map-get($estilos, width);
+                        }
+                    }
+                }
+                img{
+                    padding-right: 30px;
+                }
+            } 
+        }       
     }
 }
 
@@ -94,7 +95,7 @@
 /* Comienza ContSection  */
 
 .ContactSection{
-    width: 100%;
+    width: map-get($estilos, width);
     padding-bottom: 20px;
     background-color: $background-page-color;
 
@@ -102,7 +103,7 @@
 
     .title{
         p{
-            text-align: center;
+            text-align: map-get($estilos, text-align);
             padding: 20px;
             font-size: 25px;
             font-weight: 700;
@@ -111,7 +112,7 @@
 
     .subtitle{
         p{
-            text-align: center;
+            text-align: map-get($estilos, text-align);;
             font-weight: 300;
         }
         
@@ -142,7 +143,7 @@
             border: $border-color-cards;
             border-radius: 10px;
             padding: 15px;
-            text-align: center;
+            text-align: map-get($estilos, text-align);
             background-color: $background-color;
 
             .Card-subtitle{
@@ -151,10 +152,8 @@
             }
 
             .image-text{
-                width: 100px;
-                width: 100%;
-                display: flex;
-                justify-content: center;
+                display: map-get($estilos, display);
+                justify-content: map-get($estilos, justify-content);
                 padding-top: 20px;
         
                 img{
@@ -164,8 +163,9 @@
                 }
         
                 p{
-                    justify-self: center;
-                    align-self: center;
+                    @extend img;
+                    padding-right: 0;
+                
                 }
 
                 .number-card-1{
@@ -189,7 +189,7 @@
 
                 a{
                     color: whitesmoke;
-                    text-decoration: none; 
+                    text-decoration: map-get($estilos, text-decoration); 
                 }
             }
 
@@ -214,7 +214,7 @@
 
     .title{
         p{
-            text-align: center;
+            text-align: map-get($estilos, text-align);
             padding-top: 20px;
             font-size: 25px;
             font-weight: 500;
@@ -223,7 +223,7 @@
 
     .subtitle{
         p{
-            text-align: center;
+            text-align: map-get($estilos, text-align);
             padding-top: 30px;
             padding-bottom: 50px;
             font-weight: 220;
@@ -232,72 +232,25 @@
 
     .grid-cardNumbers{
         @include grid-card-Numbers(50px);
-    
+     
+        @each $number in number-1, number-2, number-3, number-4, number-5, number-6{
+           .#{$number}{
+                justify-self: center;
+                text-align: map-get($estilos, text-align);
+                grid: #{$number};
 
-        .number-1{
-            justify-self: center;
-            text-align: center;
-            grid: number-1;
+                .flags{
+                    width: 40px;
+                    height: 40px;
+                }
 
-            .flags{
-                width: 40px;
-                height: 40px;
-            }
-        }
+                @if $number == 'number-1' or $number == 'number-2'{
+                    color: gray;
+                    box-shadow: $box-shadow-navbar;
+                    cursor: pointer;
 
-        .number-2{
-            @extend .number-1;
-            grid: number-2;
-
-            .flags{
-                width: 40px;
-                height: 40px;
-                
-            }
-        }
-
-        .number-3{
-            @extend .number-1;
-            grid: number-3;
-
-            .flags{
-                width: 40px;
-                height: 40px;
-                
-            }
-        }
-
-        .number-4{
-            @extend .number-1;
-            grid: number-4;
-
-            .flags{
-                width: 40px;
-                height: 40px;
-                
-            }
-        }
-
-        .number-5{
-            @extend .number-1;
-            grid: number-5;
-
-            .flags{
-                width: 40px;
-                height: 40px;
-                
-            }
-        }
-
-        .number-6{
-            @extend .number-1;
-            grid: number-6;
-
-            .flags{
-                width: 40px;
-                height: 40px;
-                
-            }
+                }
+           }
         }
     }    
 }
@@ -308,19 +261,19 @@
 
 footer{
     background-color: $background-color;
-    width: 100%;
+    width: map-get($estilos, width);
     border-top: 1px solid rgb(236, 229, 229);
 
     .List{
         list-style: none;
-        text-decoration: none;
+        text-decoration: map-get($estilos, text-decoration);
         padding-top: 10px;
-        display: flex;
-        justify-content: center;
+        display: map-get($estilos, display);
+        justify-content: map-get($estilos, justify-content);
 
         @include phone{
             display: block;
-            text-align: center;
+            text-align: map-get($estilos, text-align);
         }
 
         li{
@@ -328,7 +281,7 @@ footer{
             list-style: none;
 
             a{
-                text-decoration: none;
+                text-decoration: map-get($estilos, text-decoration);
                 color: black;
             }
         }
@@ -336,7 +289,7 @@ footer{
     }
 
     .ComplementText{
-        text-align: center;
+        text-align: map-get($estilos, text-align);
         padding-bottom: 15px;
         color: black;
     }
