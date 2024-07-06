@@ -120,8 +120,9 @@
 }
 
 .first-shop-section{
-    width: 102em;
+    width: 112em;
     margin: 0px 0px 20px 115px;
+    background-color: aqua;
     border-bottom: 1px solid rgb(224, 224, 224);
     
 }
@@ -248,7 +249,7 @@
 /* Comienza second-products*/
 
 .second-shop-section{
-    width: 102em;
+    width: 112em;
     margin: 70px 0px 20px 115px;
     border-bottom: 1px solid rgb(224, 224, 224);
     

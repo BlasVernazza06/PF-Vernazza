@@ -171,6 +171,11 @@
     cursor: pointer;   
 }
 
+.Startbuttons button a{
+    text-decoration: none;
+    color: #fff;
+}
+
 .More{
     padding: 10px 54px;
     background-color: #FFF;
