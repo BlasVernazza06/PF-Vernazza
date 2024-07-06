@@ -322,19 +322,12 @@
   font-weight: 400;
 }
 .ContactSection .grid-Cards .Cards .support-button {
-  width: 130px;
-  height: 80px;
-  margin-top: 30px;
-  background-color: #fd9b40;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
   text-decoration: none;
-  color: whitesmoke;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.4s all;
+  background-color: #fd9b40;
+  font-weight: 400;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 3px;
 }
 .ContactSection .grid-Cards .Cards .support-button:hover {
   box-shadow: 1px 1px 0.5px 0.5px rgb(185, 180, 180);
