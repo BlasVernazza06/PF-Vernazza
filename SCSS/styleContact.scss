@@ -173,25 +173,27 @@
                 }
             }
 
-            .Support-Button{
+            .support-button {
                 width: 130px;
-                height: 30px;
+                height: 80px;
                 margin-top: 30px;
                 background-color: $main-color;
                 border-radius: 10px;
                 border: none;
                 cursor: pointer;
-
-                &:hover{
-                    transition: 0.4s all;
+                text-decoration: none;
+                color: whitesmoke;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: 0.4s all;
+            
+                &:hover {
                     box-shadow: 1px 1px 0.5px 0.5px $button-box-shadow-color;
                 }
-
-                a{
-                    color: whitesmoke;
-                    text-decoration: map-get($estilos, text-decoration); 
-                }
             }
+            
+            
 
             .Card-1{
                 grid: Card-1;   

@@ -321,22 +321,23 @@
 .ContactSection .grid-Cards .Cards .image-text .number-card-1 {
   font-weight: 400;
 }
-.ContactSection .grid-Cards .Cards .Support-Button {
+.ContactSection .grid-Cards .Cards .support-button {
   width: 130px;
-  height: 30px;
+  height: 80px;
   margin-top: 30px;
   background-color: #fd9b40;
   border-radius: 10px;
   border: none;
   cursor: pointer;
-}
-.ContactSection .grid-Cards .Cards .Support-Button:hover {
-  transition: 0.4s all;
-  box-shadow: 1px 1px 0.5px 0.5px rgb(185, 180, 180);
-}
-.ContactSection .grid-Cards .Cards .Support-Button a {
-  color: whitesmoke;
   text-decoration: none;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s all;
+}
+.ContactSection .grid-Cards .Cards .support-button:hover {
+  box-shadow: 1px 1px 0.5px 0.5px rgb(185, 180, 180);
 }
 .ContactSection .grid-Cards .Cards .Card-1 {
   grid: Card-1;
