@@ -120,9 +120,9 @@
 }
 
 .first-shop-section{
-    width: 100%; /* Ajustamos para que la línea sea 100% del ancho del contenedor */
-    max-width: 1200px; /* Establecemos un ancho máximo */
-    margin: 0 auto 20px auto; /* Centramos la sección */
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto 20px auto; 
     border-bottom: 1px solid rgb(224, 224, 224);
 }
 
@@ -172,11 +172,11 @@
         grid-template-columns: 350px 350px;
         grid-template-rows: 500px 500px;
         gap: 80px;
-        margin: 0 20px;
+        margin: 0 10px;
     }
 
     .first-shop-section{
-        width: 90%;
+        width: 80%;
     }
 }
 
@@ -185,9 +185,6 @@
         gap: 50px;
     }
 
-    .first-shop-section{
-        width: 85%;
-    }
 }
 
 @media (max-width: 1024px) {
@@ -214,7 +211,7 @@
     }
 
     .first-shop-section{
-        width: 75%;
+        width: 70%;
     }
 }
 
@@ -229,8 +226,7 @@
 @media (max-width: 640px) {
     .first-shop-section{
         margin-left: auto;
-        margin-right: auto;
-        width: 65%;  
+        width: 74%;  
     }
 }
 
@@ -240,8 +236,9 @@
 /* Comienza second-products*/
 
 .second-shop-section{
-    width: 112em;
-    margin: 70px 0px 20px 115px;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto 20px auto; 
     border-bottom: 1px solid rgb(224, 224, 224);
     
 }
@@ -317,7 +314,7 @@
     }
 
     .second-shop-section{
-        width: 77%;
+        width: 80%;
         
     }
 }
@@ -354,7 +351,7 @@
 
 @media (max-width: 640px){
     .second-shop-section{
-        margin-left: 60px;
+        margin-left: auto;
         width: 74%;  
     }
 }
