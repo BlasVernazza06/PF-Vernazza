@@ -106,10 +106,9 @@
 }
 /* Termina NavSection */
 
-.body-help{
+main{
     background-color: #f5f4f4d0;
-} 
-
+}
 
 .Help-Section .title-help p {
     text-align: center;
@@ -127,15 +126,27 @@
 .Form-Help-Section{
     margin-right: 100px;
     margin-left: 100px;
+    padding-bottom: 30px;
 }
 
 .Form-Help-Section .Card-Form{
-    background-color: rgb(229, 242, 248);
+    background-color: rgb(177, 224, 248);
     width: 100%;
     padding: 15px 15px;
     margin-top: 30px;
-    border: 1px solid rgb(180, 179, 177);
-    border-bottom: none;
+    border-radius: 10px;
+    
+}
+
+.button-submit-div{
+    display: flex;
+    justify-content: center;
+
+}
+
+.button-submit{
+    width: 14em;
+
 }
 
 .form-label{
