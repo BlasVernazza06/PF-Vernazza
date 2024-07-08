@@ -126,7 +126,7 @@
     background-attachment: fixed;
     background-size: cover;
     background-position: top;
-    opacity: 0.6;
+    opacity: 0.7;
     z-index: -1;
 }
 
@@ -136,7 +136,7 @@
     z-index: 1;
     flex-direction: column;
     color: #fff;
-    padding: 0 10%; /* Ajuste del padding para ser más responsivo */
+    padding: 90px; /* Ajuste del padding para ser más responsivo */
     margin: 0 auto;
     height: auto; /* Ajuste de altura para que sea automática */
     width: 100%;
@@ -209,7 +209,7 @@
 
 @media (max-width: 1536px) {
     .StartTextSection {
-        padding: 60px; /* Ajuste del padding para ser más responsivo */
+        padding: 90px; /* Ajuste del padding para ser más responsivo */
         height: auto; /* Ajuste de altura para que sea automática */
     }
 
