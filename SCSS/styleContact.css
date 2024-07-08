@@ -79,9 +79,6 @@
 .nav-bar ul li:nth-child(1) a:hover::after {
   width: 100%;
 }
-.nav-bar ul li:nth-child(1) img, .nav-bar ul li:nth-child(1) .ContactSection .grid-Cards .Cards .image-text p, .ContactSection .grid-Cards .Cards .image-text .nav-bar ul li:nth-child(1) p {
-  padding-right: 30px;
-}
 .nav-bar ul li:nth-child(2) {
   display: inline-block;
   padding-right: 25px;
@@ -121,9 +118,6 @@
 }
 .nav-bar ul li:nth-child(2) a:hover::after {
   width: 100%;
-}
-.nav-bar ul li:nth-child(2) img, .nav-bar ul li:nth-child(2) .ContactSection .grid-Cards .Cards .image-text p, .ContactSection .grid-Cards .Cards .image-text .nav-bar ul li:nth-child(2) p {
-  padding-right: 30px;
 }
 .nav-bar ul li:nth-child(3) {
   display: inline-block;
@@ -165,9 +159,6 @@
 .nav-bar ul li:nth-child(3) a:hover::after {
   width: 100%;
 }
-.nav-bar ul li:nth-child(3) img, .nav-bar ul li:nth-child(3) .ContactSection .grid-Cards .Cards .image-text p, .ContactSection .grid-Cards .Cards .image-text .nav-bar ul li:nth-child(3) p {
-  padding-right: 30px;
-}
 .nav-bar ul li:nth-child(4) {
   display: inline-block;
   padding-right: 25px;
@@ -207,9 +198,6 @@
 }
 .nav-bar ul li:nth-child(4) a:hover::after {
   width: 100%;
-}
-.nav-bar ul li:nth-child(4) img, .nav-bar ul li:nth-child(4) .ContactSection .grid-Cards .Cards .image-text p, .ContactSection .grid-Cards .Cards .image-text .nav-bar ul li:nth-child(4) p {
-  padding-right: 30px;
 }
 .nav-bar ul li:nth-child(5) {
   display: inline-block;
@@ -251,7 +239,7 @@
 .nav-bar ul li:nth-child(5) a:hover::after {
   width: 100%;
 }
-.nav-bar ul li:nth-child(5) img, .nav-bar ul li:nth-child(5) .ContactSection .grid-Cards .Cards .image-text p, .ContactSection .grid-Cards .Cards .image-text .nav-bar ul li:nth-child(5) p {
+.nav-bar img, .nav-bar .ContactSection .grid-Cards .Cards .image-text p, .ContactSection .grid-Cards .Cards .image-text .nav-bar p {
   padding-right: 30px;
 }
 
