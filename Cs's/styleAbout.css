@@ -125,11 +125,16 @@
     padding: 30px;
 }
 
-.subTitle-AboutUS{
+.subTitle-AboutUS {
     align-items: center;
     text-align: center;
     font-size: 15px;
-    padding: 20px 100px 30px 100px;
+    margin-bottom: 30px;
+    padding: 1px 10px; /* Utilizando porcentajes para el padding */
+}
+
+.accordion-body {
+    padding: 10px; /* Padding relativo para el contenido del acordeón */
 }
 
 
