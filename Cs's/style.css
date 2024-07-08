@@ -108,31 +108,42 @@
 /* Comienza StartSection  */
 
 
-.grid-StartSection{
-    background-image: url(/Images/parallaxFinal.jpeg);
+.grid-StartSection {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-StartSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/Images/Fondo.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: top;
-    display: flex;
-    box-shadow: 1px 1px 1px 1px #e2e0e0;
-    width: 100%;
-    height: 100%;
-    
+    opacity: 0.6;
+    z-index: -1;
 }
 
-.StartTextSection{
-    background-color: rgba(104, 116, 124, 0.95);
-    border-radius: 20px 20px 0px 0px;
-    color: #e2e0e0;
-    padding: 10px;
-    margin: 50px 30px 0px 70em;
-    height: 500px;
+.StartTextSection {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+    color: #fff;
+    padding: 0 10%; /* Ajuste del padding para ser más responsivo */
+    margin: 0 auto;
+    height: auto; /* Ajuste de altura para que sea automática */
+    width: 100%;
     text-align: center;
-    align-self: center;
-    justify-self: center;
+    align-content: center;
+    justify-content: center;
     overflow: hidden;
-    background-color: transparent 10px;
 }
 
 .StartTextSection span{
@@ -184,7 +195,7 @@
 
 .Start {
     padding: 10px 40px;
-    background-color:#4092fd;
+    background-color:#fd9b40;
     color: white;
 }
 
@@ -197,187 +208,132 @@
 }
 
 @media (max-width: 1536px) {
-    .StartTextSection{
-        background-color: rgba(104, 116, 124, 0.95);
-        border-radius: 20px 20px 0px 0px;
-        color: #e2e0e0;
-        padding: 10px;
-        margin: 50px 30px 0px 50em;
-        height: 500px;
-        text-align: center;
-        align-self: center;
-        justify-self: center;
-        overflow: hidden;
-        background-color: transparent 10px;
+    .StartTextSection {
+        padding: 60px; /* Ajuste del padding para ser más responsivo */
+        height: auto; /* Ajuste de altura para que sea automática */
     }
 
-    .Startbuttons{
+    .Startbuttons {
         padding-top: 60px;
     }
 
-    .StartTextSection span{
+    .StartTextSection span {
         color: #fd9b40;
     }
-    
-    
-    .title{
+
+    .title {
         font-size: 2em;  
     }
-    
-    .sub-title{
-        padding: 30px 10px 0px 10px;
+
+    .sub-title {
+        padding: 30px 10px 0 10px;
         font-size: 1.3em;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         margin-bottom: 30px;
-        
     }
 }
 
 @media (max-width: 1280px) {
-    .StartTextSection{
-        background-color: rgba(104, 116, 124, 0.95);
-        border-radius: 20px 20px 0px 0px;
-        color: #e2e0e0;
-        padding: 10px;
-        margin: 50px 15em 0px 15em;
-        height: 500px;
-        text-align: center;
-        align-self: center;
-        justify-self: center;
-        overflow: hidden;
-        background-color: transparent 10px;
+    .StartTextSection {
+        padding: 60px; /* Ajuste del padding para ser más responsivo */
+        height: auto; /* Ajuste de altura para que sea automática */
     }
 
-    .Startbuttons{
-        padding-top: 90px;
+    .Startbuttons {
+        padding-top: 50px;
     }
 
-    .StartTextSection span{
+    .StartTextSection span {
         color: #fd9b40;
     }
-    
-    
-    .title{
+
+    .title {
         font-size: 1.7em;  
     }
-    
-    .sub-title{
-        padding: 30px 10px 0px 10px;
+
+    .sub-title {
+        padding: 30px 10px 0 10px;
         font-size: 1.2em;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         margin-bottom: 30px;
-        
     }
 }
 
 @media (max-width: 1024px) {
-    .StartTextSection{
-        background-color: rgba(104, 116, 124, 0.95);
-        border-radius: 20px 20px 0px 0px;
-        color: #e2e0e0;
-        padding: 10px;
-        margin: 50px 10em 0px 10em;
-        height: 500px;
-        text-align: center;
-        align-self: center;
-        justify-self: center;
-        overflow: hidden;
-        background-color: transparent 10px;
+    .StartTextSection {
+        padding: 60px; /* Ajuste del padding para ser más responsivo */
+        height: auto; /* Ajuste de altura para que sea automática */
     }
 
-    .Startbuttons{
-        padding-top: 90px;
+    .Startbuttons {
+        padding-top: 40px;
     }
 
-    .StartTextSection span{
+    .StartTextSection span {
         color: #fd9b40;
     }
-    
-    
-    .title{
+
+    .title {
         font-size: 1.7em;  
     }
-    
-    .sub-title{
-        padding: 30px 10px 0px 10px;
+
+    .sub-title {
+        padding: 30px 10px 0 10px;
         font-size: 1.2em;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         margin-bottom: 30px;
-        
     }
 }
 
 @media (max-width: 768px) {
-    .StartTextSection{
-        background-color: rgba(104, 116, 124, 0.95);
-        border-radius: 20px 20px 0px 0px;
-        color: #e2e0e0;
-        padding: 10px;
-        margin: 50px 6em 0px 6em;
-        height: 500px;
-        text-align: center;
-        align-self: center;
-        justify-self: center;
-        overflow: hidden;
-        background-color: transparent 10px;
+    .StartTextSection {
+        padding: 60px; /* Ajuste del padding para ser más responsivo */
+        height: auto; /* Ajuste de altura para que sea automática */
     }
 
-    .Startbuttons{
-        padding-top: 90px;
+    .Startbuttons {
+        padding-top: 30px;
     }
 
-    .StartTextSection span{
+    .StartTextSection span {
         color: #fd9b40;
     }
-    
-    
-    .title{
+
+    .title {
         font-size: 1.7em;  
     }
-    
-    .sub-title{
-        padding: 30px 10px 0px 10px;
+
+    .sub-title {
+        padding: 30px 10px 0 10px;
         font-size: 1.2em;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         margin-bottom: 30px;
-        
     }
 }
 
 @media (max-width: 640px) {
-    .StartTextSection{
-        background-color: rgba(104, 116, 124, 0.95);
-        border-radius: 20px 20px 0px 0px;
-        color: #e2e0e0;
-        padding: 10px;
-        margin: 50px 6em 0px 6em;
-        height: 500px;
-        text-align: center;
-        align-self: center;
-        justify-self: center;
-        overflow: hidden;
-        background-color: transparent 10px;
+    .StartTextSection {
+        padding: 60px; /* Ajuste del padding para ser más responsivo */
+        height: auto; /* Ajuste de altura para que sea automática */
     }
 
-    .Startbuttons{
-        padding-top: 90px;
+    .Startbuttons {
+        padding-top: 30px;
     }
 
-    .StartTextSection span{
+    .StartTextSection span {
         color: #fd9b40;
     }
-    
-    
-    .title{
+
+    .title {
         font-size: 1.7em;  
     }
-    
-    .sub-title{
-        padding: 30px 10px 0px 10px;
+
+    .sub-title {
+        padding: 30px 10px 0 10px;
         font-size: 1.2em;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         margin-bottom: 30px;
-        
     }
 }
 
@@ -491,7 +447,7 @@
         grid-template-rows: 1fr 1fr;
         gap: 50px;
         justify-content: center;
-        align-items: center;
+        align-content: center;
         text-align: center;
         padding: 50px 10px 80px 20px;
     }
@@ -514,7 +470,7 @@
         grid-template-rows: 1fr 1fr 1fr 1fr;
         gap: 50px;
         justify-content: center;
-        align-items: center;
+        align-content: center;
         text-align: center;
         padding: 50px 10px 80px 20px;
     }
